@@ -9,19 +9,19 @@ import { Budget } from '../budget';
 })
 export class BudgetListComponent implements OnInit {
   budgets: Budget[] = [];
-  number: number ;
+  number: number;
   avgFood: number;
   avgCharity: number;
-  avgUtilities: number = 0;
-  avgPersonal: number = 0;
-  avgRecreation: number = 0;
-  avgTransporation: number = 0;
-  avgInsurance: number = 0;
-  avgDebts: number = 0;
-  avgMedical: number = 0;
-  avgClothing: number = 0;
-  avgHousing: number = 0;
-  avgSaving: number = 0;
+  avgUtilities: number;
+  avgPersonal: number;
+  avgRecreation: number;
+  avgTransportation: number;
+  avgInsurance: number;
+  avgDebts: number;
+  avgMedical: number;
+  avgClothing: number;
+  avgHousing: number;
+  avgSaving: number;
 
 
   percentageOfIncome(expense: number, income: number)
@@ -33,12 +33,8 @@ export class BudgetListComponent implements OnInit {
   {
       for(let budget of this.budgets)
       {
-        console.log(this.avgFood);
-        console.log(this.avgFood+=(budget.food/budget.income));
-        console.log(budget.food);
-        console.log(budget.income);
-        console.log(this.avgFood);
-        /*this.avgSaving+=(budget.saving/budget.income);
+        this.avgFood+=(budget.food/budget.income);
+        this.avgSaving+=(budget.saving/budget.income);
         this.avgHousing+=(budget.housing/budget.income);
         this.avgInsurance+=(budget.insurance/budget.income);
         this.avgCharity+=(budget.charitableGifts/budget.income);
@@ -47,12 +43,12 @@ export class BudgetListComponent implements OnInit {
         this.avgDebts+=(budget.debts/budget.income);
         this.avgMedical+=(budget.medicalAndHealth/budget.income);
         this.avgClothing+=(budget.clothing/budget.income);
-        this.avgTransporation+=(budget.transportation/budget.income);
-        this.avgUtilities+=(budget.utilities/budget.income);*/
+        this.avgTransportation+=(budget.transportation/budget.income);
+        this.avgUtilities+=(budget.utilities/budget.income);
       }
       this.avgFood = this.avgFood/this.budgets.length;
-     /* this.avgSaving = this.avgSaving/this.budgets.length;
-      this.avgTransporation = this.avgTransporation/this.budgets.length;
+      this.avgSaving = this.avgSaving/this.budgets.length;
+      this.avgTransportation = this.avgTransportation/this.budgets.length;
       this.avgUtilities = this.avgUtilities/this.budgets.length;
       this.avgPersonal = this.avgPersonal/this.budgets.length;
       this.avgRecreation = this.avgRecreation/this.budgets.length;
@@ -61,7 +57,7 @@ export class BudgetListComponent implements OnInit {
       this.avgInsurance = this.avgInsurance/this.budgets.length;
       this.avgHousing = this.avgHousing/this.budgets.length;
       this.avgDebts = this.avgDebts/this.budgets.length;
-      this.avgClothing = this.avgClothing/this.budgets.length;*/
+      this.avgClothing = this.avgClothing/this.budgets.length;
   }
 
 
@@ -74,6 +70,19 @@ export class BudgetListComponent implements OnInit {
       serviceBudgets =>
       {
         this.budgets = serviceBudgets;
+        this.number = 0;
+        this.avgFood= 0;
+        this.avgCharity= 0;
+        this.avgUtilities = 0;
+        this.avgPersonal = 0;
+        this.avgRecreation = 0;
+        this.avgTransportation = 0;
+        this.avgInsurance = 0;
+        this.avgDebts = 0;
+        this.avgMedical = 0;
+        this.avgClothing = 0;
+        this.avgHousing = 0;
+        this.avgSaving = 0;
         this.averageBudgets();
       }
     )
