@@ -1,0 +1,22 @@
+{
+    "Budgets": [
+      {
+        "id": 0,
+        "month": "January",
+        "charitableGifts": 1.11,
+        "saving": 1.11,
+        "housing": 1.11,
+        "utilities": 1.11,
+        "food": 1.11,
+        "transportation": 1.11,
+        "clothing": 1.11,
+        "medicalAndHealth": 1.11,
+        "insurance": 1.11,
+        "personal": 1.11,
+        "recreation": 1.11,
+        "debts": 1.11,
+        "income": 11.11,
+        "totalExpense": 13.00
+      }
+    ]
+  }

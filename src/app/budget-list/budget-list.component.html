@@ -1,0 +1,103 @@
+<div class='card'>
+  <div class='card-header'>
+    Budgets
+  </div>
+  <div class='card-body'>
+    <div class = 'table-responsive'>
+      <table class='table'
+        *ngIf='budgets && budgets.length'>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Month</th>
+            <th>Income</th>
+            <th>Saving</th>
+            <th>Housing</th>
+            <th>Utilities</th>
+            <th>Food</th>
+            <th>Transportation</th>
+            <th>Clothing</th>
+            <th>Medical/Health</th>
+            <th>Insurance</th>
+            <th>Personal</th>
+            <th>Recreation</th>
+            <th>Debts</th>
+            <th>Charity/Gifts</th>
+            <th></th>
+            <th>Total</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = 'let budget of budgets'>
+            <td>
+            </td>
+            <td style="font-weight:bold">
+              {{budget.month}}
+            </td>
+            <td>
+              {{budget.income | currency}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.saving, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.housing, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.utilities, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.food, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.transportation, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.clothing, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.medicalAndHealth, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.insurance, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.personal, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.recreation, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.debts, budget.income) | percent}}
+            </td>
+            <td>
+              {{percentageOfIncome(budget.charitableGifts, budget.income) | percent}}
+            </td>
+            <td></td>
+            <td style="font-weight:bold">
+              {{percentageOfIncome(budget.totalExpense, budget.income) | percent}}
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="font-weight:bold">Average</td>
+            <td></td>
+            <td style="font-weight:bold">{{avgFood}}</td>
+            <!--<td style="font-weight:bold">{{avgHousing | percent}}</td>
+            <td style="font-weight:bold">{{avgUtilities | percent}}</td>
+            <td style="font-weight:bold">{{avgFood | percent}}</td>
+            <td style="font-weight:bold">{{avgTransporatation | percent}}</td>
+            <td style="font-weight:bold">{{avgClothing | percent}}</td>
+            <td style="font-weight:bold">{{avgMedical | percent}}</td>
+            <td style="font-weight:bold">{{avgInsurance | percent}}</td>
+            <td style="font-weight:bold">{{avgPersonal | percent}}</td>
+            <td style="font-weight:bold">{{avgRecreation | percent}}</td>
+            <td style="font-weight:bold">{{avgDebts | percent}}</td>
+            <td style="font-weight:bold">{{avgCharity | percent}}</td>-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
