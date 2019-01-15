@@ -1,5 +1,6 @@
 export class Budget
 {
+    id:number;
     month: string
     charitableGifts: number;
     saving: number;

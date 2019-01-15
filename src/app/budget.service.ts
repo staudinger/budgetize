@@ -17,6 +17,11 @@ export class BudgetService {
     return this.http.get<Budget[]>(this.APIUrl);
   }
 
+  addBudget(budget: Budget): Observable<Budget>
+  {
+    return this.http.post<Budget>(this.APIUrl, budget)
+  }
+
 
   constructor(private http: HttpClient) { }
 }

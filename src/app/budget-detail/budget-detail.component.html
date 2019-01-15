@@ -1,0 +1,48 @@
+<div class='card' *ngIf ='budget'>
+    <div class='card-header'>
+      {{budget.month}}
+    </div>
+    <div class = 'table-responsive'>
+      <table class='table'>
+        <thead>
+          <tr>
+            <th>Income</th>
+            <th>Saving</th>
+            <th>Housing</th>
+            <th>Utilities</th>
+            <th>Food</th>
+            <th>Transportation</th>
+            <th>Clothing</th>
+            <th>Medical/Health</th>
+            <th>Insurance</th>
+            <th>Personal</th>
+            <th>Recreation</th>
+            <th>Debts</th>
+            <th>Charity/Gifts</th>
+            <th></th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              {{budget.income}}
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class='card-footer'>
+      <button class='btn btn-outline-secondary'
+        (click) = 'clickBack()'
+        style='width:80px'>
+        Back
+      </button>
+    </div>
+  </div>

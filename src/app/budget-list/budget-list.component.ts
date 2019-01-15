@@ -22,6 +22,7 @@ export class BudgetListComponent implements OnInit {
   avgClothing: number;
   avgHousing: number;
   avgSaving: number;
+  avgExpenses: number;
 
 
   percentageOfIncome(expense: number, income: number)
@@ -45,6 +46,7 @@ export class BudgetListComponent implements OnInit {
         this.avgClothing+=(budget.clothing/budget.income);
         this.avgTransportation+=(budget.transportation/budget.income);
         this.avgUtilities+=(budget.utilities/budget.income);
+        this.avgExpenses+=(budget.totalExpense/budget.income);
       }
       this.avgFood = this.avgFood/this.budgets.length;
       this.avgSaving = this.avgSaving/this.budgets.length;
@@ -58,6 +60,7 @@ export class BudgetListComponent implements OnInit {
       this.avgHousing = this.avgHousing/this.budgets.length;
       this.avgDebts = this.avgDebts/this.budgets.length;
       this.avgClothing = this.avgClothing/this.budgets.length;
+      this.avgExpenses = this.avgExpenses/this.budgets.length;
   }
 
 
@@ -83,10 +86,10 @@ export class BudgetListComponent implements OnInit {
         this.avgClothing = 0;
         this.avgHousing = 0;
         this.avgSaving = 0;
+        this.avgExpenses = 0;
         this.averageBudgets();
       }
     )
-    this.averageBudgets();
   }
 
 }

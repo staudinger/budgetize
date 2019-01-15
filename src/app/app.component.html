@@ -1,2 +1,9 @@
-<app-budget-list></app-budget-list>
-<router-outlet></router-outlet>
+<nav class='navbar navbar-expand navbar-ight bg-light'>
+        <a class='navbar-brand'>budgetize</a>
+        <ul class='nav nav-pills'>
+          <li><a class='nav-link'[routerLink] = "['budgets']">Budgets</a></li>
+          <li><a class='nav-link'[routerLink] = "['add-budget']">Add Budget</a></li>
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
+      

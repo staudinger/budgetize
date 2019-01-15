@@ -32,9 +32,9 @@
           <tr *ngFor = 'let budget of budgets'>
             <td>
             </td>
-            <td style="font-weight:bold">
+            <td style="font-weight:bold"><a [routerLink] = "['/budgets', budget.month]">
               {{budget.month}}
-            </td>
+            </a></td>
             <td>
               {{budget.income | currency}}
             </td>
@@ -95,6 +95,8 @@
             <td style="font-weight:bold">{{avgRecreation | percent}}</td>
             <td style="font-weight:bold">{{avgDebts | percent}}</td>
             <td style="font-weight:bold">{{avgCharity | percent}}</td>
+            <td></td>
+            <td style="font-weight:bold">{{avgExpenses | percent}}</td>
           </tr>
         </tbody>
       </table>
