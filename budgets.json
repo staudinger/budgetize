@@ -16,7 +16,7 @@
       "recreation": 1.11,
       "debts": 1.11,
       "income": 11.11,
-      "totalExpense": 13
+      "totalExpense": 13.32
     },
     {
       "month": "February",
@@ -35,6 +35,24 @@
       "charitableGifts": 1,
       "id": 1,
       "totalExpense": 12
+    },
+    {
+      "month": "March",
+      "income": 50,
+      "saving": 4,
+      "housing": 4,
+      "utilities": 4,
+      "food": 4,
+      "transportation": 4,
+      "clothing": 4,
+      "medicalAndHealth": 4,
+      "insurance": 4,
+      "personal": 4,
+      "recreation": 4,
+      "debts": 4,
+      "charitableGifts": 4,
+      "totalExpense": 48,
+      "id": 2
     }
   ]
 }

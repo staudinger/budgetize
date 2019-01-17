@@ -6,7 +6,7 @@
       <table class='table'>
         <thead>
           <tr>
-            <th>Income</th>
+            <th style="font-weight:bold">Income</th>
             <th>Saving</th>
             <th>Housing</th>
             <th>Utilities</th>
@@ -20,19 +20,53 @@
             <th>Debts</th>
             <th>Charity/Gifts</th>
             <th></th>
-            <th>Total</th>
+            <th style="font-weight:bold">Total</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
-              {{budget.income}}
+            <td style="font-weight:bold">
+              {{budget.income | currency}}
             </td>
             <td>
+              {{budget.saving | currency}}
             </td>
             <td>
+              {{budget.housing | currency}}
             </td>
             <td>
+              {{budget.utilities | currency}}
+            </td>
+            <td>
+              {{budget.food | currency}}
+            </td>
+            <td>
+              {{budget.transportation | currency}}
+            </td>
+            <td>
+              {{budget.clothing | currency}}
+            </td>
+            <td>
+              {{budget.medicalAndHealth | currency}}
+            </td>
+            <td>
+              {{budget.insurance | currency}}
+            </td>
+            <td>
+              {{budget.personal | currency}}
+            </td>
+            <td>
+              {{budget.recreation | currency}}
+            </td>
+            <td>
+              {{budget.debts | currency}}
+            </td>
+            <td>
+              {{budget.charitableGifts | currency}}
+            </td>
+            <td></td>
+            <td style="font-weight:bold">
+              {{budget.totalExpense | currency}}
             </td>
           </tr>
         </tbody>

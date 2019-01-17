@@ -8,14 +8,13 @@
         *ngIf='budgets && budgets.length'>
         <thead>
           <tr>
-            <th></th>
             <th>Month</th>
             <th>Income</th>
             <th>Saving</th>
             <th>Housing</th>
             <th>Utilities</th>
             <th>Food</th>
-            <th>Transportation</th>
+            <th>Transport</th>
             <th>Clothing</th>
             <th>Medical/Health</th>
             <th>Insurance</th>
@@ -30,8 +29,7 @@
         </thead>
         <tbody>
           <tr *ngFor = 'let budget of budgets'>
-            <td>
-            </td>
+
             <td style="font-weight:bold"><a [routerLink] = "['/budgets', budget.month]">
               {{budget.month}}
             </a></td>
@@ -75,28 +73,27 @@
               {{percentageOfIncome(budget.charitableGifts, budget.income) | percent}}
             </td>
             <td></td>
-            <td style="font-weight:bold">
+            <td style="font-weight:bold" [ngStyle]="{'color': percentageOfIncome(budget.totalExpense, budget.income) > 1 ? 'red' : 'black'}">
               {{percentageOfIncome(budget.totalExpense, budget.income) | percent}}
             </td>
           </tr>
           <tr>
-            <td></td>
             <td style="font-weight:bold">Average</td>
+            <td style="font-weight:bold">{{avgBudget.avgIncome | currency}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgSaving | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgHousing | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgUtilities | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgFood | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgTransportation | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgClothing | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgMedical | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgInsurance | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgPersonal | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgRecreation | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgDebts | percent}}</td>
+            <td style="font-weight:bold">{{avgBudget.avgCharity | percent}}</td>
             <td></td>
-            <td style="font-weight:bold">{{avgSaving | percent}}</td>
-            <td style="font-weight:bold">{{avgHousing | percent}}</td>
-            <td style="font-weight:bold">{{avgUtilities | percent}}</td>
-            <td style="font-weight:bold">{{avgFood | percent}}</td>
-            <td style="font-weight:bold">{{avgTransportation | percent}}</td>
-            <td style="font-weight:bold">{{avgClothing | percent}}</td>
-            <td style="font-weight:bold">{{avgMedical | percent}}</td>
-            <td style="font-weight:bold">{{avgInsurance | percent}}</td>
-            <td style="font-weight:bold">{{avgPersonal | percent}}</td>
-            <td style="font-weight:bold">{{avgRecreation | percent}}</td>
-            <td style="font-weight:bold">{{avgDebts | percent}}</td>
-            <td style="font-weight:bold">{{avgCharity | percent}}</td>
-            <td></td>
-            <td style="font-weight:bold">{{avgExpenses | percent}}</td>
+            <td style="font-weight:bold" [ngStyle]="{'color': avgBudget.avgExpenses > 1 ? 'red' : 'black'}">{{avgBudget.avgExpenses | percent}}</td>
           </tr>
         </tbody>
       </table>
