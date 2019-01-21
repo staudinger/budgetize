@@ -13,3 +13,4 @@ thead
 {
     color: #337AB7
 }
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"

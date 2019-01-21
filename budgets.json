@@ -53,6 +53,24 @@
       "charitableGifts": 4,
       "totalExpense": 48,
       "id": 2
+    },
+    {
+      "month": "April",
+      "income": 1500,
+      "saving": 0,
+      "housing": 400,
+      "utilities": 175,
+      "food": 200,
+      "transportation": 50,
+      "clothing": 5,
+      "medicalAndHealth": 100,
+      "insurance": 60,
+      "personal": 10,
+      "recreation": 50,
+      "debts": 100,
+      "charitableGifts": 0,
+      "totalExpense": 1150,
+      "id": 3
     }
   ]
 }
