@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Node
 
 In command prompt run:
+`npm i`
 `npm install -g json-server`
 
 you might need to reopen the project

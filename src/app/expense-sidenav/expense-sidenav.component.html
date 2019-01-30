@@ -1,0 +1,31 @@
+
+
+
+
+  <mat-sidenav-container class="app-sidenav-container">
+        <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10"
+            opened="true"
+            mode="side">
+            <mat-toolbar color="primary">
+                Expense Categories
+            </mat-toolbar>
+            <mat-nav-list>
+                    <mat-list-item *ngFor="let category of expenseCategories | async">
+                       <a matLine [routerLink]="['/budgetize', category.name]">
+                         {{ category.name }}
+                       </a>
+                    </mat-list-item>
+            </mat-nav-list>
+        </mat-sidenav>
+      
+        <div class="app-sidenav-content">
+            <body>
+                <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+                <div class="wrapper">
+                    <router-outlet></router-outlet>
+                </div>      
+           </body> 
+
+        </div>
+      </mat-sidenav-container>
+    

@@ -1,0 +1,64 @@
+{
+    "ExpenseCategories": [
+      {
+        "id": 0,
+        "name": "Charitable Gifts",
+        "description": "Tithes, Gifts to Charity"
+      },
+      {
+        "name": "Saving",
+        "description": "Emergency fund, Retirement fund, College fund",
+        "id": 1
+      },
+      {
+        "name": "Housing",
+        "description": "Mortgage/Rent, Property taxes, Repairs, Association dues",
+        "id": 2
+      },
+      {
+        "name": "Utilities",
+        "description": "Electricity, Water, Gas, Trash, Phone, Internet, Cable",
+        "id": 3
+      },
+      {
+        "name": "Food",
+        "description": "Groceries, Restaurants",
+        "id": 4
+      },
+      {
+        "name": "Clothing",
+        "description": "Adults, Children, Laundry",
+        "id": 5
+      },
+      {
+        "name": "Transportation",
+        "description": "Gas, Oil, Repairs/Tires, License/Taxes, Car replacement",
+        "id": 6
+      },
+      {
+        "name": "Medical/Health",
+        "description": "Medications, Doctor Bills, Dentist, Optometrist, Vitamins, Therapy",
+        "id": 7
+      },
+      {
+        "name": "Insurance",
+        "description": "Life Insurance, Health Insurance, Home/Rent Insurance, Auto Insurance",
+        "id": 8
+      },
+      {
+        "name": "Personal",
+        "description": "Child Care, Toiletries, Cosmetics, Education, Books, Child support, Alimony, Subscriptions, Christmas Gifts, Birthday Gifts, Replace Furniture fund, Pocket Money, Pet Supplies, Tech toys, Baby Supplies",
+        "id": 9
+      },
+      {
+        "name": "Entertainment",
+        "description": "Dates, Vacations, Activities with friends, Hobbies",
+        "id": 10
+      },
+      {
+        "name": "Debts",
+        "description": "Car Payments, Credit Card Payments, Student Loans",
+        "id": 11
+      }
+    ]
+  }

@@ -1,0 +1,16 @@
+<div *ngIf="!category">
+  <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="category">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{category.name}}</mat-card-title>
+      <mat-card-subtitle>Expense</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{category.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
