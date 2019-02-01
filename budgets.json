@@ -1,78 +1,6 @@
 {
   "Budgets": [
     {
-      "id": 0,
-      "month": "January",
-      "charitableGifts": 1.11,
-      "saving": 1.11,
-      "housing": 1.11,
-      "utilities": 1.11,
-      "food": 1.11,
-      "transportation": 1.11,
-      "clothing": 1.11,
-      "medicalAndHealth": 1.11,
-      "insurance": 1.11,
-      "personal": 1.11,
-      "recreation": 1.11,
-      "debts": 1.11,
-      "income": 11.11,
-      "totalExpense": 13.32
-    },
-    {
-      "month": "February",
-      "income": 24,
-      "saving": 1,
-      "housing": 1,
-      "utilities": 1,
-      "food": 1,
-      "transportation": 1,
-      "clothing": 1,
-      "medicalAndHealth": 1,
-      "insurance": 1,
-      "personal": 1,
-      "recreation": 1,
-      "debts": 1,
-      "charitableGifts": 1,
-      "id": 1,
-      "totalExpense": 12
-    },
-    {
-      "month": "March",
-      "income": 50,
-      "saving": 4,
-      "housing": 4,
-      "utilities": 4,
-      "food": 4,
-      "transportation": 4,
-      "clothing": 4,
-      "medicalAndHealth": 4,
-      "insurance": 4,
-      "personal": 4,
-      "recreation": 4,
-      "debts": 4,
-      "charitableGifts": 4,
-      "totalExpense": 48,
-      "id": 2
-    },
-    {
-      "month": "April",
-      "income": 1500,
-      "saving": 0,
-      "housing": 400,
-      "utilities": 175,
-      "food": 200,
-      "transportation": 50,
-      "clothing": 5,
-      "medicalAndHealth": 100,
-      "insurance": 60,
-      "personal": 10,
-      "recreation": 50,
-      "debts": 100,
-      "charitableGifts": 0,
-      "totalExpense": 1150,
-      "id": 3
-    },
-    {
       "month": "May",
       "income": 5000,
       "saving": 2000,
@@ -88,7 +16,25 @@
       "debts": 100,
       "charitableGifts": 4,
       "totalExpense": 4704,
-      "id": 4
+      "id": 0
+    },
+    {
+      "month": "June",
+      "income": 5000,
+      "saving": 2000,
+      "housing": 950,
+      "utilities": 250,
+      "food": 350,
+      "clothing": 30,
+      "transportation": 100,
+      "medicalAndHealth": 150,
+      "insurance": 375,
+      "personal": 150,
+      "recreation": 250,
+      "debts": 300,
+      "charitableGifts": 500,
+      "totalExpense": 5405,
+      "id": 1
     }
   ],
   "ExpenseCategories": [
@@ -143,7 +89,7 @@
       "id": 9
     },
     {
-      "name": "Entertainment",
+      "name": "Recreation",
       "description": "Dates, Vacations, Activities with friends, Hobbies",
       "id": 10
     },
