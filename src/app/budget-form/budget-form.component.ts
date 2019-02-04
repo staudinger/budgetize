@@ -18,19 +18,13 @@ export class BudgetFormComponent implements OnInit {
   budget = {} as Budget;
   budgets: Budget[] = [];
 
-
- 
-
-
   getErrorMessageIncome() {
     return this.form.get('income').errors['required'] ? 'You must enter an income': '';
   }
 
-
   getErrorMessageCharity() {
     return this.form.get('charitableGifts').errors['required'] ? 'You must enter an amount': '';
   }
-
 
   getErrorMessageSaving() {
     return this.form.get('savings').errors['required'] ? 'You must enter an amount': '';
@@ -41,51 +35,41 @@ export class BudgetFormComponent implements OnInit {
     return this.form.get('housing').errors['required'] ? 'You must enter an amount': '';
   }
 
-
   getErrorMessageUtilities() {
     return this.form.get('utilities').errors['required'] ? 'You must enter an amount': '';
   }
-
 
   getErrorMessageFood() {
     return this.form.get('food').errors['required'] ? 'You must enter an amount': '';
   }
 
-
   getErrorMessageClothing() {
     return this.form.get('clothing').errors['required'] ? 'You must enter an amount': '';
   }
-
 
   getErrorMessageTransportation() {
     return this.form.get('transportation').errors['required'] ? 'You must enter an amount': '';
   }
 
-
   getErrorMessageMedical() {
     return this.form.get('medicalAndHealth').errors['required'] ? 'You must enter an amount': '';
   }
-
 
   getErrorMessageInsurance() {
     return this.form.get('insurance').errors['required'] ? 'You must enter an amount': '';
   }
 
-
   getErrorMessagePersonal() {
     return this.form.get('personal').errors['required'] ? 'You must enter an amount': '';
   }
-
 
   getErrorMessageRecreation() {
     return this.form.get('recreation').errors['required'] ? 'You must enter an amount': '';
   }
 
-
   getErrorMessageDebts() {
     return this.form.get('debts').errors['required'] ? 'You must enter an amount': '';
   }
-
 
   getErrorMessageMonth() {
     return this.form.get('month').errors['required'] ? 'You must enter a month': '';
