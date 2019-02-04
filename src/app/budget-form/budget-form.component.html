@@ -1,186 +1,117 @@
-<!--<div class="container">
-  <h3>New Budget</h3>
-  <form #form="ngForm" novalidate>
-    <div class="form-group">
-      
-      <label>Month</label>
-      <input type="text" step="0.01" class="form-control" required name="id" placeholder="e.g January"
-          [(ngModel)] ="budget.month">
 
-      <label>Income</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.income">
-
-      <label>Saving</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.saving">
-          
-      <label>Housing</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.housing">
-
-      <label>Utilities</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.utilities">
-
-      <label>Food</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.food">
-
-      <label>Transportation</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.transportation">
-
-      <label>Clothing</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.clothing">
-
-      <label>Medical/Health</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.medicalAndHealth">
-      
-      <label>Insurance</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.insurance">
-      
-      <label>Personal</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.personal">
-
-      <label>Recreation</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.recreation">
-
-      <label>Debts</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.debts">
-
-      <label>Charity/Gifts</label>
-      <input type="number" step="0.01" class="form-control" required name="id" placeholder="0.00"
-          [(ngModel)] ="budget.charitableGifts">
-
-    </div>
-    <button class="btn btn-primary" (click) = 'clickSubmit()' type="submit">Ok</button>
-  </form>
-</div>-->
-
-
-
-
-<div class="add-budget-container">
+<form  class="add-budget-container" [formGroup]="form" > 
     <mat-form-field>
-      <input matInput placeholder="Month" [formControl]="month" required
+      <input matInput placeholder="Month" formControlName="month" required
             [(ngModel)] = "budget.month">
-        <mat-error *ngIf="month.invalid">
+        <mat-error *ngIf="form.get('month').invalid && form.get('month').touched">
             {{getErrorMessageMonth()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00" matInput placeholder="Income" [formControl]="income" required
+      <input type="number" step="0.01" value="0.00" matInput placeholder="Income" formControlName="income" required
             [(ngModel)] = "budget.income">
-        <mat-error *ngIf="income.invalid">
-            {{getErrorMessageIncome()}}
+        <mat-error *ngIf="form.get('income').invalid && form.get('income').touched">
+                {{getErrorMessageIncome()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Saving" [formControl]="savings" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Saving" formControlName="savings" required
             [(ngModel)] = "budget.saving">
-        <mat-error *ngIf="income.saving">
+        <mat-error *ngIf="form.get('savings').invalid && form.get('savings').touched">
             {{getErrorMessageSaving()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Housing" [formControl]="housing" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Housing" formControlName="housing" required
             [(ngModel)] = "budget.housing">
-        <mat-error *ngIf="housing.invalid">
+        <mat-error *ngIf="form.get('housing').invalid && form.get('housing').touched">
             {{getErrorMessageHousing()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Utilities" [formControl]="utilities" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Utilities" formControlName="utilities" required
             [(ngModel)] = "budget.utilities">
-        <mat-error *ngIf="utilities.invalid">
+        <mat-error *ngIf="form.get('utilities').invalid && form.get('utilities').touched">
             {{getErrorMessageUtilities()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Food" [formControl]="food" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Food" formControlName="food" required
             [(ngModel)] = "budget.food">
-        <mat-error *ngIf="food.invalid">
+        <mat-error *ngIf="form.get('food').invalid && form.get('food').touched">
             {{getErrorMessageFood()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Clothing" [formControl]="clothing" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Clothing" formControlName="clothing" required
             [(ngModel)] = "budget.clothing">
-        <mat-error *ngIf="clothing.invalid">
+        <mat-error *ngIf="form.get('clothing').invalid && form.get('clothing').touched">
             {{getErrorMessageClothing()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Transportation" [formControl]="transportation" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Transportation" formControlName="transportation" required
             [(ngModel)] = "budget.transportation">
-        <mat-error *ngIf="transportation.invalid">
+        <mat-error *ngIf="form.get('transportation').invalid && form.get('transportation').touched">
             {{getErrorMessageTransportation()}}
         </mat-error>
     </mat-form-field>
 
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Medical/Health" [formControl]="medicalAndHealth" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Medical/Health" formControlName="medicalAndHealth" required
             [(ngModel)] = "budget.medicalAndHealth">
-        <mat-error *ngIf="medicalAndHealth.invalid">
+        <mat-error *ngIf="form.get('medicalAndHealth').invalid && form.get('medicalAndHealth').touched">
             {{getErrorMessageMedical()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Insurance" [formControl]="insurance" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Insurance" formControlName="insurance" required
             [(ngModel)] = "budget.insurance">
-        <mat-error *ngIf="insurance.invalid">
+        <mat-error *ngIf="form.get('insurance').invalid && form.get('insurance').touched">
             {{getErrorMessageInsurance()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Personal" [formControl]="personal" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Personal" formControlName="personal" required
             [(ngModel)] = "budget.personal">
-        <mat-error *ngIf="personal.invalid">
+        <mat-error *ngIf="form.get('personal').invalid && form.get('personal').touched">
             {{getErrorMessagePersonal()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Recreation" [formControl]="recreation" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Recreation" formControlName="recreation" required
             [(ngModel)] = "budget.recreation">
-        <mat-error *ngIf="recreation.invalid">
+        <mat-error *ngIf="form.get('recreation').invalid && form.get('recreation').touched">
             {{getErrorMessageRecreation()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Debts" [formControl]="debts" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Debts" formControlName="debts" required
             [(ngModel)] = "budget.debts">
-        <mat-error *ngIf="debts.invalid">
+        <mat-error *ngIf="form.get('debts').invalid && form.get('debts').touched">
             {{getErrorMessageDebts()}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="number" step="0.01" value="0.00"  matInput placeholder="Charity/Gifts" [formControl]="charitableGifts" required
+      <input type="number" step="0.01" value="0.00"  matInput placeholder="Charity/Gifts" formControlName="charitableGifts" required
             [(ngModel)] = "budget.charitableGifts">
-        <mat-error *ngIf="charitableGifts.invalid">
+        <mat-error *ngIf="form.get('charitableGifts').invalid && form.get('charitableGifts').touched">
             {{getErrorMessageCharity()}}
         </mat-error>
     </mat-form-field>
     
-    <button class="btn btn-primary" (click) = 'clickSubmit()' type="submit">Ok</button>
-
-</div>
+    <button class="btn btn-primary" [disabled]= "!form.valid" (click) = 'clickSubmit()' type="submit">Submit</button>
+</form>

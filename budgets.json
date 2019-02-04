@@ -35,6 +35,24 @@
       "charitableGifts": 500,
       "totalExpense": 5405,
       "id": 1
+    },
+    {
+      "month": "July",
+      "income": 5000,
+      "saving": 1600,
+      "housing": 950,
+      "utilities": 250,
+      "food": 350,
+      "clothing": 40,
+      "transportation": 100,
+      "medicalAndHealth": 100,
+      "insurance": 350,
+      "personal": 150,
+      "recreation": 300,
+      "debts": 350,
+      "charitableGifts": 500,
+      "totalExpense": 5040,
+      "id": 2
     }
   ],
   "ExpenseCategories": [
